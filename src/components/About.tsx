@@ -1,4 +1,5 @@
 import { Award, Users, Clock, MapPin } from "lucide-react";
+import treatmentMain from "@/assets/treatment-main.jpeg";
 
 const stats = [
   { icon: Users, label: "Pacientes Atendidos", value: "500+" },
@@ -27,7 +28,7 @@ const About = () => {
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
-                  <div key={index} className="p-4 rounded-lg border border-border/50">
+                  <div key={index} className="p-4 rounded-lg border border-border/50 bg-secondary/20">
                     <Icon className="h-8 w-8 text-primary mb-2" />
                     <div className="text-2xl font-bold mb-1">{stat.value}</div>
                     <div className="text-sm text-muted-foreground">{stat.label}</div>
@@ -38,7 +39,17 @@ const About = () => {
           </div>
           
           <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 shadow-elegant" />
+            <div className="overflow-hidden rounded-2xl shadow-elegant">
+              <img 
+                src={treatmentMain} 
+                alt="Quiropraxista RaffaQuiro realizando ajuste cervical" 
+                className="w-full h-[500px] object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
+              <div className="text-3xl font-bold">10+</div>
+              <div className="text-sm opacity-90">Anos de Experiência</div>
+            </div>
           </div>
         </div>
       </div>
