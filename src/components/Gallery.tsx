@@ -41,11 +41,13 @@ const Gallery = () => {
 
   const handlePrevClick = useCallback(() => {
     setDirection("backward");
-  }, []);
+    api?.scrollPrev();
+  }, [api]);
 
   const handleNextClick = useCallback(() => {
     setDirection("forward");
-  }, []);
+    api?.scrollNext();
+  }, [api]);
 
   return (
     <section className="py-20 bg-secondary/30">
