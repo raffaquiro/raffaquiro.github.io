@@ -1,9 +1,11 @@
+import { useState, useEffect, useCallback } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -20,6 +22,31 @@ const images = [
 ];
 
 const Gallery = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [direction, setDirection] = useState<"forward" | "backward">("forward");
+
+  useEffect(() => {
+    if (!api) return;
+
+    const interval = setInterval(() => {
+      if (direction === "forward") {
+        api.scrollNext();
+      } else {
+        api.scrollPrev();
+      }
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [api, direction]);
+
+  const handlePrevClick = useCallback(() => {
+    setDirection("backward");
+  }, []);
+
+  const handleNextClick = useCallback(() => {
+    setDirection("forward");
+  }, []);
+
   return (
     <section className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -32,16 +59,11 @@ const Gallery = () => {
         
         <div className="max-w-4xl mx-auto">
           <Carousel
+            setApi={setApi}
             opts={{
               align: "center",
               loop: true,
             }}
-            plugins={[
-              Autoplay({
-                delay: 4000,
-                stopOnInteraction: false,
-              }),
-            ]}
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
@@ -57,8 +79,14 @@ const Gallery = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 md:-left-12 bg-background/80 backdrop-blur-sm border-border/50 hover:bg-background" />
-            <CarouselNext className="right-2 md:-right-12 bg-background/80 backdrop-blur-sm border-border/50 hover:bg-background" />
+            <CarouselPrevious 
+              onClick={handlePrevClick}
+              className="left-2 md:-left-12 bg-background/80 backdrop-blur-sm border-border/50 hover:bg-background" 
+            />
+            <CarouselNext 
+              onClick={handleNextClick}
+              className="right-2 md:-right-12 bg-background/80 backdrop-blur-sm border-border/50 hover:bg-background" 
+            />
           </Carousel>
         </div>
       </div>
