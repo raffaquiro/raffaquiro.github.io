@@ -24,9 +24,9 @@ const Testimonials = () => {
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">O Que Dizem Nossos Pacientes</h2>
+          <h2 className="text-4xl font-bold mb-4">O Que Dizem Meus Pacientes</h2>
           <p className="text-lg text-muted-foreground">
-            Depoimentos reais de quem experimentou nossos tratamentos
+            Depoimentos reais de quem experimentou meus tratamentos
           </p>
         </div>
 

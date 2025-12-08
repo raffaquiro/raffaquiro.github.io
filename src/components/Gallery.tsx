@@ -23,9 +23,9 @@ const Gallery = () => {
     <section className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Nosso Trabalho</h2>
+          <h2 className="text-4xl font-bold mb-4">Meu Trabalho</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Conheça um pouco do nosso espaço e dos tratamentos que realizamos
+            Conheça um pouco do meu espaço e dos tratamentos que realizo
           </p>
         </div>
         

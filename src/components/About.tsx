@@ -14,13 +14,13 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold mb-6">Sobre RaffaQuiro</h2>
+            <h2 className="text-4xl font-bold mb-6">Sobre Mim</h2>
             <p className="text-lg text-muted-foreground mb-4">
-              Com mais de uma década de experiência em quiropraxia, nosso compromisso é 
+              Sou o Rafael, quiropraxista com mais de uma década de experiência. Meu compromisso é 
               oferecer tratamentos personalizados que promovam saúde, bem-estar e qualidade de vida.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Utilizamos técnicas modernas e comprovadas para tratar dores nas costas, 
+              Utilizo técnicas modernas e comprovadas para tratar dores nas costas, 
               pescoço, articulações e outros problemas relacionados à coluna vertebral.
             </p>
             
