@@ -18,14 +18,39 @@ const availableTimes = [
   "09:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00"
 ];
 
+const formatPhone = (value: string) => {
+  const numbers = value.replace(/\D/g, "").slice(0, 11);
+  if (numbers.length <= 2) return numbers;
+  if (numbers.length <= 7) return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+  return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7)}`;
+};
+
+const isValidEmail = (email: string) => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+};
+
 const BookingModal = ({ open, onOpenChange }: BookingModalProps) => {
   const [date, setDate] = useState<Date>();
   const [selectedTime, setSelectedTime] = useState<string>();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
   const [phone, setPhone] = useState("");
   const [notes, setNotes] = useState("");
   const { toast } = useToast();
+
+  const handleEmailChange = (value: string) => {
+    setEmail(value);
+    if (value && !isValidEmail(value)) {
+      setEmailError("Email inválido");
+    } else {
+      setEmailError("");
+    }
+  };
+
+  const handlePhoneChange = (value: string) => {
+    setPhone(formatPhone(value));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,17 +64,34 @@ const BookingModal = ({ open, onOpenChange }: BookingModalProps) => {
       return;
     }
 
-    // Aqui você conectará com o backend do Lovable Cloud
+    if (!isValidEmail(email)) {
+      toast({
+        title: "Email inválido",
+        description: "Por favor, insira um email válido.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    if (phone.replace(/\D/g, "").length < 11) {
+      toast({
+        title: "Telefone inválido",
+        description: "Por favor, insira um telefone válido com DDD.",
+        variant: "destructive"
+      });
+      return;
+    }
+
     toast({
       title: "Agendamento realizado!",
       description: `Sua sessão foi agendada para ${format(date, "dd 'de' MMMM 'de' yyyy", { locale: ptBR })} às ${selectedTime}.`,
     });
 
-    // Reset form
     setDate(undefined);
     setSelectedTime(undefined);
     setName("");
     setEmail("");
+    setEmailError("");
     setPhone("");
     setNotes("");
     onOpenChange(false);
@@ -118,10 +160,12 @@ const BookingModal = ({ open, onOpenChange }: BookingModalProps) => {
                   id="email"
                   type="email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => handleEmailChange(e.target.value)}
                   placeholder="seu@email.com"
                   required
+                  className={emailError ? "border-destructive" : ""}
                 />
+                {emailError && <p className="text-sm text-destructive mt-1">{emailError}</p>}
               </div>
 
               <div>
@@ -130,7 +174,7 @@ const BookingModal = ({ open, onOpenChange }: BookingModalProps) => {
                   id="phone"
                   type="tel"
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  onChange={(e) => handlePhoneChange(e.target.value)}
                   placeholder="(00) 00000-0000"
                   required
                 />
