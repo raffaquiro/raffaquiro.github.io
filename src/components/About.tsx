@@ -2,10 +2,10 @@ import { Award, Users, Clock, MapPin } from "lucide-react";
 import treatmentMain from "@/assets/treatment-main.jpeg";
 
 const stats = [
-  { icon: Users, label: "Pacientes Atendidos", value: "500+" },
+  { icon: Users, label: "Pacientes Atendidos", value: "MAIS DE 8 MIL" },
   { icon: Award, label: "Anos de Experiência", value: "10+" },
   { icon: Clock, label: "Horas de Atendimento", value: "5000+" },
-  { icon: MapPin, label: "Localização", value: "Central" }
+  { icon: MapPin, label: "Localização (esse card pode ser um link pro maps)", value: "Rua Exemplo, 123" }
 ];
 
 const About = () => {
@@ -23,6 +23,8 @@ const About = () => {
               Utilizo técnicas modernas e comprovadas para tratar dores nas costas, 
               pescoço, articulações e outros problemas relacionados à coluna vertebral.
             </p>
+
+            <h2 className="text-xl font-bold mb-6">Vale lembrar que as informações abaixo são exemplos, tudo pode ser modificado.</h2>
             
             <div className="grid grid-cols-2 gap-4 mt-8">
               {stats.map((stat, index) => {

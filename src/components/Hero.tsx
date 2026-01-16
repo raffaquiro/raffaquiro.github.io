@@ -1,11 +1,20 @@
 import { Button } from "@/components/ui/button";
-import { Calendar } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa"
 
 interface HeroProps {
   onBookingClick: () => void;
 }
 
-const Hero = ({ onBookingClick }: HeroProps) => {
+const Hero = ({ /* onBookingClick */ }: HeroProps) => {
+  
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "5544999176850";
+    const message = "Olá, gostaria de agendar uma sessão de Quiropraxia.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 gradient-hero opacity-10" />
@@ -25,10 +34,11 @@ const Hero = ({ onBookingClick }: HeroProps) => {
           
           <Button 
             size="lg" 
-            onClick={onBookingClick}
+            onClick={handleWhatsAppClick}
             className="text-lg px-8 py-6 shadow-elegant hover:shadow-glow transition-all duration-300"
+            variant="secondary"
           >
-            <Calendar className="mr-2 h-5 w-5" />
+            <FaWhatsapp size={50}/>
             Agendar Sessão
           </Button>
         </div>

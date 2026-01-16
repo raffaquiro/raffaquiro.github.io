@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="space-y-3 text-muted-foreground">
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-1" />
-                <span>Rua Exemplo, 123<br />São Paulo - SP</span>
+                <span>Rua Exemplo, 123<br />Maringá - PR</span>
               </div>
             </div>
           </div>
