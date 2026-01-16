@@ -5,29 +5,29 @@ const services = [
   {
     icon: Activity,
     title: "Ajustes Vertebrais",
-    description: "Correção de subluxações vertebrais para restaurar o movimento adequado e aliviar dores."
+    description: "Correção de disfunções vertebrais para restaurar o movimento adequado e aliviar suas dores."
   },
   {
     icon: Heart,
-    title: "Tratamento Holístico",
-    description: "Abordagem completa focada no bem-estar integral do corpo e mente."
+    title: "Liberação Miofascial ",
+    description: "Relaxamento muscular, tratando musculaturas que fixam lesões Quiropráticas."
   },
   {
     icon: Zap,
-    title: "Alívio Imediato",
-    description: "Técnicas eficazes para redução rápida de dores agudas e crônicas."
+    title: "Mobilização Neural",
+    description: "Mobilização dos nervos, restaurando espasticidade movimento e elasticidade dos nervos."
   },
   {
     icon: Shield,
-    title: "Prevenção",
-    description: "Cuidados preventivos para manter sua saúde e evitar lesões futuras."
+    title: "Haguihara e Infravermelho",
+    description: "Recuperação tecidual acelerada de Músculos e Nervos."
   }
 ];
 
 const Services = () => {
   return (
     <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+      <div className="w-11/12 mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Meus Serviços</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

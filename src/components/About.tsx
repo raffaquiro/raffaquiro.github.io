@@ -44,7 +44,7 @@ const About = () => {
             <div className="overflow-hidden rounded-2xl shadow-elegant">
               <img 
                 src={treatmentMain} 
-                alt="Quiropraxista RaffaQuiro realizando ajuste cervical" 
+                alt="Quiropraxista Raffa Quiro realizando ajuste cervical" 
                 className="w-full h-[500px] object-cover"
               />
             </div>

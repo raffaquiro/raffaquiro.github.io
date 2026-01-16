@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              RaffaQuiro
+              Raffa Quiro
             </h3>
             <p className="text-muted-foreground">
               Cuidando da sua saúde com profissionalismo e dedicação.
@@ -23,7 +23,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>contato@raffaquiro.com</span>
+                <span>raffaquiro@gmail.com</span>
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border text-center text-muted-foreground">
-          <p>&copy; 2024 RaffaQuiro. Todos os direitos reservados.</p>
+          <p>&copy; 2026 Raffa Quiro. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
