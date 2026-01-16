@@ -1,24 +1,24 @@
 import { useState } from "react";
-import Hero from "@/components/Hero.ts";
-import Services from "@/components/Services.ts";
-import Gallery from "@/components/Gallery.ts";
-import About from "@/components/About.ts";
-import Testimonials from "@/components/Testimonials.ts";
-import Footer from "@/components/Footer.ts";
-import BookingModal from "@/components/BookingModal.ts";
+import Hero from "@/components/Hero.tsx";
+import Services from "@/components/Services.tsx";
+import Gallery from "@/components/Gallery.tsx";
+import About from "@/components/About.tsx";
+import Testimonials from "@/components/Testimonials.tsx";
+import Footer from "@/components/Footer.tsx";
+// import BookingModal from "@/components/BookingModal.tsx";
 
 const Index = () => {
   const [bookingOpen, setBookingOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
-      <Hero onBookingClick={() => setBookingOpen(true)} />
+      <Hero onBookingClick={() => setBookingOpen(false)} /> {/* Mudar pra true se quiser mostrar no futuro */}
       <Services />
       <Gallery />
       <About />
       <Testimonials />
       <Footer />
-      <BookingModal open={bookingOpen} onOpenChange={setBookingOpen} />
+      {/* <BookingModal open={bookingOpen} onOpenChange={setBookingOpen} />*/}
     </div>
   );
 };

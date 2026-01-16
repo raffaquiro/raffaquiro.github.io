@@ -1,4 +1,4 @@
-import { useState } from "react";
+/* import { useState } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
@@ -202,4 +202,5 @@ const BookingModal = ({ open, onOpenChange }: BookingModalProps) => {
   );
 };
 
-export default BookingModal;
+export default BookingModal; 
+*/
