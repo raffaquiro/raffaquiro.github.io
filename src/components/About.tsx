@@ -25,11 +25,37 @@ const About = () => {
             <div className="grid grid-cols-2 gap-4 mt-8">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
-                return (
-                  <div key={index} className="p-4 rounded-lg border border-border/50 bg-secondary/20">
+                const isLocation = stat.icon === MapPin;
+                const content = (
+                  <>
                     <Icon className="h-8 w-8 text-primary mb-2" />
                     <div className="text-2xl font-bold mb-1">{stat.value}</div>
                     <div className="text-sm text-muted-foreground">{stat.label}</div>
+                    {isLocation && (
+                      <div className="text-sm text-primary text-right mt-1 mb-0 underline">
+                        Veja no mapa
+                      </div>
+                    )}
+                  </>
+                );
+
+                if (isLocation) {
+                  return (
+                    <a
+                      key={index}
+                      href="https://maps.google.com/?q=SAG+Terapias,+Av.+Itororó,+637,+Zona+2,+Maringá+-+PR"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-4 rounded-lg border border-border/50 bg-secondary/20 hover:bg-secondary/40 hover:border-primary/50 transition-all cursor-pointer"
+                    >
+                      {content}
+                    </a>
+                  );
+                }
+
+                return (
+                  <div key={index} className="p-4 rounded-lg border border-border/50 bg-secondary/20">
+                    {content}
                   </div>
                 );
               })}
@@ -46,7 +72,7 @@ const About = () => {
             </div>
             <div className="absolute -bottom-3 -left-3 md:-bottom-6 md:-left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
               <div className="text-3xl font-bold">2+</div>
-              <div className="text-sm opacity-90">Anos de Experiência em Dor</div>
+              <div className="text-sm opacity-90">Anos de Experiência</div>
             </div>
           </div>
         </div>

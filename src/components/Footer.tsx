@@ -17,24 +17,35 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contato</h4>
             <div className="space-y-3 text-muted-foreground">
-              <div className="flex items-center gap-2">
+                <a 
+                href="tel:+5544999176850"
+                className="flex items-center gap-2 hover:text-primary transition-colors"
+                >
                 <Phone className="h-4 w-4" />
                 <span>+55 (44) 99917-6850</span>
-              </div>
-              <div className="flex items-center gap-2">
+              </a>
+              <a 
+                href="mailto:raffaquiro@gmail.com"
+                className="flex items-center gap-2 hover:text-primary transition-colors"
+              >
                 <Mail className="h-4 w-4" />
                 <span>raffaquiro@gmail.com</span>
-              </div>
+              </a>
             </div>
           </div>
 
           <div>
             <h4 className="font-semibold mb-4">Localização</h4>
             <div className="space-y-3 text-muted-foreground">
-              <div className="flex items-start gap-2">
+              <a
+                href="https://maps.google.com/?q=SAG+Terapias,+Av.+Itororó,+637,+Zona+2,+Maringá+-+PR"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 hover:text-primary transition-colors"
+              >
                 <MapPin className="h-4 w-4 mt-1" />
                 <span>SAG Terapias<br />Av. Itororó, 637, Zona 2<br />Maringá - PR</span>
-              </div>
+              </a>
             </div>
           </div>
 
