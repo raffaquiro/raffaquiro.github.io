@@ -25,11 +25,10 @@ const Hero = ({ /* onBookingClick */ }: HeroProps) => {
             Raffa Quiro
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Quiropraxia de Excelência com Raciocínio Clínico Integrado
+            Quiropraxia e Raciocínio Clínico Integrado RCI
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Cuide de sua Saúde com o Melhor tratamento em Quiropraxia de Maringá e Região
-            Alívio de dores, melhora da postura e qualidade de vida.
+            Cuide de sua Saúde com o melhor tratamento em Quiropraxia e Terapias Manuais de Maringá e região.
           </p>
 
           <Button

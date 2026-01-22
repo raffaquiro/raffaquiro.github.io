@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="space-y-3 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>(11) 99999-9999</span>
+                <span>+55 (44) 99917-6850</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="space-y-3 text-muted-foreground">
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-1" />
-                <span>Rua Exemplo, 123<br />Maringá - PR</span>
+                <span>SAG Terapias<br />Av. Itororó, 637, Zona 2<br />Maringá - PR</span>
               </div>
             </div>
           </div>

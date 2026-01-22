@@ -4,23 +4,33 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const services = [
   {
     icon: Activity,
-    title: "Ajustes Vertebrais",
-    description: "Correção de disfunções vertebrais para restaurar o movimento adequado e aliviar suas dores."
-  },
-  {
-    icon: Heart,
-    title: "Liberação Miofascial ",
-    description: "Relaxamento muscular, tratando musculaturas que fixam lesões Quiropráticas."
-  },
-  {
-    icon: Zap,
-    title: "Mobilização Neural",
-    description: "Mobilização dos nervos, restaurando espasticidade movimento e elasticidade dos nervos."
+    title: "Alívio Imediato",
+    description: "Avaliação e tratamento das disfunções estruturais que causam dor muscular ou articular."
   },
   {
     icon: Shield,
-    title: "Haguihara e Infravermelho",
-    description: "Recuperação tecidual acelerada de Músculos e Nervos."
+    title: "Prevenção",
+    description: "Cuidados preventivos para manter sua saúde e evitar lesões futuras. Avaliações e manipulações específicas em pontos de tensão."
+  },
+  {
+    icon: Zap,
+    title: "Recovery",
+    description: "Recuperação muscular e articular para atletas de alto rendimento."
+  },
+  {
+    icon: Heart,
+    title: "Preparatório",
+    description: "Ideal para Crossfiteiros, Corredores e Lutadores prepararem-se para provas."
+  },
+  {
+    icon: Heart,
+    title: "Fibromialgia e Crises Emocionais",
+    description: "Através da manipulação no crânio e nos tecidos moles, combatemos o estresse emocional de situações de bloqueio e conflito em somatização ao corpo."
+  },
+  {
+    icon: Activity,
+    title: "Disfunções Viscerais",
+    description: "Manipulação superficial sobre pontos de tensão nas vísceras, que causam má digestão, azia, constipação, cólicas, dentre outras disfunções."
   }
 ];
 
@@ -35,7 +45,7 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

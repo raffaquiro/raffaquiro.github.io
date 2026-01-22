@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Hero from "@/components/Hero.tsx";
 import Services from "@/components/Services.tsx";
+import Techniques from "@/components/Techniques.tsx";
 import Gallery from "@/components/Gallery.tsx";
 import About from "@/components/About.tsx";
 import Testimonials from "@/components/Testimonials.tsx";
@@ -14,6 +15,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Hero onBookingClick={() => setBookingOpen(false)} /> {/* Mudar pra true se quiser mostrar no futuro */}
       <Services />
+      <Techniques />
       <Gallery />
       <About />
       <Testimonials />

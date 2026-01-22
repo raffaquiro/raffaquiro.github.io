@@ -2,10 +2,10 @@ import { Award, Users, Clock, MapPin } from "lucide-react";
 import treatmentMain from "@/assets/treatment-main.jpeg";
 
 const stats = [
-  { icon: Users, label: "Pacientes Atendidos", value: "MAIS DE 8 MIL" },
-  { icon: Award, label: "Anos de Experiência", value: "10+" },
-  { icon: Clock, label: "Horas de Atendimento", value: "5000+" },
-  { icon: MapPin, label: "Localização (esse card pode ser um link pro maps)", value: "Rua Exemplo, 123" }
+  { icon: Users, label: "Pacientes Atendidos", value: "+ DE 2.000" },
+  { icon: Award, label: "Anos de Experiência em Dor", value: "2+" },
+  { icon: Clock, label: "Horas de Atendimento", value: "+ DE 3.000" },
+  { icon: MapPin, label: "SAG Terapias", value: "Av. Itororó, 637" }
 ];
 
 const About = () => {
@@ -16,15 +16,11 @@ const About = () => {
           <div>
             <h2 className="text-4xl font-bold mb-6">Sobre Mim</h2>
             <p className="text-lg text-muted-foreground mb-4">
-              Sou o Rafael, quiropraxista com mais de uma década de experiência. Meu compromisso é 
-              oferecer tratamentos personalizados que promovam saúde, bem-estar e qualidade de vida.
+              Olá, me chamo Rafael, quiroprata e massoterapeuta pioneiro no método RCI em Maringá - PR. Meu compromisso é oferecer tratamentos personalizados que promovam saúde, bem-estar e qualidade de vida para você, sua família ou sua empresa.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Utilizo técnicas modernas e comprovadas para tratar dores nas costas, 
-              pescoço, articulações e outros problemas relacionados à coluna vertebral.
+              Utilizo técnicas modernas e comprovadas cientificamente para tratar dores nas costas, pescoço, dores de cabeça, articulações e outros problemas relacionados à origem mecânica.
             </p>
-
-            <h2 className="text-xl font-bold mb-6">Vale lembrar que as informações abaixo são exemplos, tudo pode ser modificado.</h2>
             
             <div className="grid grid-cols-2 gap-4 mt-8">
               {stats.map((stat, index) => {
@@ -49,8 +45,8 @@ const About = () => {
               />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
-              <div className="text-3xl font-bold">10+</div>
-              <div className="text-sm opacity-90">Anos de Experiência</div>
+              <div className="text-3xl font-bold">2+</div>
+              <div className="text-sm opacity-90">Anos de Experiência em Dor</div>
             </div>
           </div>
         </div>
