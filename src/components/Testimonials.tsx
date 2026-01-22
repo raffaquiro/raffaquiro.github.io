@@ -3,18 +3,23 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Maria Silva",
-    text: "Excelente profissional! Minhas dores nas costas diminuíram significativamente após algumas sessões.",
+    name: "Marina Balan",
+    text: "Profissional excelente, dedicado e muito capacitado, possui postura e caráter impecáveis. Conheci através de uma indicação e hoje indico para todos em minha volta! O Raffa consegue resgatar o nosso próprio conforto em nosso corpo.",
     rating: 5
   },
   {
-    name: "João Santos",
-    text: "Atendimento impecável e resultados rápidos. Recomendo a todos que sofrem com dores articulares.",
+    name: "Enzo Negri Vinholi",
+    text: "Atendimento bom e rápido, estava com dor na lombar e em 15 minutos resolveu.",
     rating: 5
   },
   {
-    name: "Ana Paula",
-    text: "A quiropraxia mudou minha qualidade de vida. O Dr. Raffa é muito atencioso e competente.",
+    name: "Cristina Kelly",
+    text: "O Rafael é muito atencioso, meu marido chegou lá não estava nem andando, saiu bem, sem dor e com certeza iremos voltar.",
+    rating: 5
+  },
+  {
+    name: "Chiara Alves De Souza",
+    text: "Estou fazendo acompanhamento semanal com liberações e tem sido essencial na minha preparação para correr minha quarta maratona!",
     rating: 5
   }
 ];
@@ -30,7 +35,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="border-border/50">
               <CardContent className="pt-6">

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa6"
 import { FaArrowDown } from "react-icons/fa6";
+import videoIntro from "@/assets/RAFFA_QUIRO_GERAL.mp4";
 
 interface HeroProps {
   onBookingClick: () => void;
@@ -29,17 +30,33 @@ const Hero = ({ /* onBookingClick */ }: HeroProps) => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Raffa Quiro
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">
+          
+          <div className="mb-4 md:mb-8 mx-auto w-full max-w-md">
+            <div className="rounded-2xl overflow-hidden shadow-elegant hover:shadow-glow transition-shadow duration-300 bg-black/5">
+              <video
+                className="w-full h-auto max-h-[45vh] sm:max-h-[55vh] md:max-h-[60vh] object-cover mx-auto"
+                controls
+                playsInline
+                preload="metadata"
+                poster=""
+              >
+                <source src={videoIntro} type="video/mp4" />
+                Seu navegador não suporta a reprodução de vídeos.
+              </video>
+            </div>
+          </div>
+
+          <p className="text-xl md:text-2xl text-muted-foreground mb-2 md:mb-4">
             Quiropraxia e Raciocínio Clínico Integrado RCI
           </p>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-4 md:mb-8 max-w-2xl mx-auto">
             Cuide de sua Saúde com o melhor tratamento em Quiropraxia e Terapias Manuais de Maringá e região.
           </p>
 
-          <div className="flex flex-col items-center gap-20">
+          <div className="flex flex-col items-center gap-4">
             <Button
               size="lg"
               onClick={handleWhatsAppClick}
