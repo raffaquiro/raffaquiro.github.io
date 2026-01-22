@@ -50,7 +50,7 @@ const Gallery = () => {
   }, [api]);
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section className="min-h-[100vh] py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Meu Trabalho</h2>

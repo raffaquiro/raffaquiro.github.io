@@ -6,6 +6,7 @@ import Gallery from "@/components/Gallery.tsx";
 import About from "@/components/About.tsx";
 import Testimonials from "@/components/Testimonials.tsx";
 import Footer from "@/components/Footer.tsx";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp.tsx";
 // import BookingModal from "@/components/BookingModal.tsx";
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
       <About />
       <Testimonials />
       <Footer />
+      <FloatingWhatsApp />
       {/* <BookingModal open={bookingOpen} onOpenChange={setBookingOpen} />*/}
     </div>
   );

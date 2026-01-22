@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { FaWhatsapp } from "react-icons/fa"
+import { FaWhatsapp } from "react-icons/fa6"
+import { FaArrowDown } from "react-icons/fa6";
 
 interface HeroProps {
   onBookingClick: () => void;
@@ -15,8 +16,15 @@ const Hero = ({ /* onBookingClick */ }: HeroProps) => {
     window.open(whatsappUrl, "_blank");
   };
 
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 gradient-hero opacity-10" />
 
       <div className="container mx-auto px-4 relative z-10">
@@ -31,15 +39,25 @@ const Hero = ({ /* onBookingClick */ }: HeroProps) => {
             Cuide de sua Saúde com o melhor tratamento em Quiropraxia e Terapias Manuais de Maringá e região.
           </p>
 
-          <Button
-            size="lg"
-            onClick={handleWhatsAppClick}
-            className="text-lg px-8 py-6 shadow-elegant hover:shadow-glow transition-all duration-300"
-            variant="secondary"
-          >
-            <FaWhatsapp size={50} />
-            Agendar Sessão
-          </Button>
+          <div className="flex flex-col items-center gap-20">
+            <Button
+              size="lg"
+              onClick={handleWhatsAppClick}
+              className="text-lg px-8 py-6 shadow-elegant hover:shadow-glow transition-all duration-300"
+              variant="secondary"
+            >
+              <FaWhatsapp size={50} />
+              Agendar Sessão
+            </Button>
+
+            <button
+              onClick={scrollToAbout}
+              className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors duration-300 underline-offset-4 hover:underline"
+            >
+              Saiba Mais 
+            <FaArrowDown size={25}/>
+            </button>
+          </div>
         </div>
       </div>
     </section>

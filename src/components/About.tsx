@@ -10,7 +10,7 @@ const stats = [
 
 const About = () => {
   return (
-    <section className="py-20">
+    <section id="about" className="py-20">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -44,7 +44,7 @@ const About = () => {
                 className="w-full h-[500px] object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
+            <div className="absolute -bottom-3 -left-3 md:-bottom-6 md:-left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
               <div className="text-3xl font-bold">2+</div>
               <div className="text-sm opacity-90">Anos de Experiência em Dor</div>
             </div>
